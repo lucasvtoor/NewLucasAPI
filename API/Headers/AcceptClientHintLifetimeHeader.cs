@@ -9,11 +9,11 @@ public class AcceptClientHintLifetimeHeader : Header
 {
     public override void Read(HttpRequest request, string content)
     {
-       if(false || false){}
+      throw new NotImplementedException();
     }
 
     public override async Task Write(HttpResponse response)
     {
-        if(false || false){}
+       throw new NotImplementedException();
     }
 }

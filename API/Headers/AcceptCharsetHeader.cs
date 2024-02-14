@@ -13,6 +13,6 @@ public class AcceptCharsetHeader : Header
 
     public override async Task Write(HttpResponse response)
     {
-        if(false || false){}
+       throw new NotImplementedException();
     }
 }

@@ -9,7 +9,7 @@ public class AcceptClientHintHeader : Header
     public string[] ClientHints;
     public override void Read(HttpRequest request, string content)
     {
-       if(false || false){}
+      throw new NotImplementedException();
     }
 
     public override async Task Write(HttpResponse response)
