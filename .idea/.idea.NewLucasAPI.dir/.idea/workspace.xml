@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e5a401a-6d91-44ba-bdc4-c5eb09fc3c5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptCharsetHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptClientHintHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptClientHintLifetimeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptEncodingHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptLanguageHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptPatchHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptPostHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AcceptRangesHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlAllowCredentialsHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlAllowHeadersHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlAllowMethodsHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlAllowOriginHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlExposeHeadersHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlMaxAgeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlRequestHeadersHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AccessControlRequestMethodHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AgeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AllowHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AltSvcHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/AuthorizationHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/CacheControlHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ClearSiteDataHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ConnectionHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentDPRHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentDispositionHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentEncodingHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentLanguageHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentLengthHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentLocationHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentRangeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentSecurityPolicyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentSecurityPolicyReportOnlyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ContentTypeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/CookieHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/CrossOriginEmbedderPolicyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/CrossOriginOpenerPolicyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/CrossOriginResourcePolicyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DNTHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DPRHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DateHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DeprecatedHeaderAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DeviceMemoryHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DigestHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/DownlinkHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ECTHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ETagHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/EarlyDataHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/EncodingType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ExpectCTHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ExpectHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ExperimentalNonstandardHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ExpiresHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/FeaturePolicyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ForwardedHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/FromHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/Header.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/HeaderAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/HeaderExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/HostHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/IfMatchHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/IfModifiedSinceHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/IfNoneMatchHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/IfRangeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/IfUnmodifiedSinceHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/KeepAliveHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/LargeAllocationHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/LastModifiedHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/LinkHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/LocationHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/MaxForwardsHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/NELHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/OriginHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/PragmaHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ProxyAuthenticateHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ProxyAuthorizationHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/RTTHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/RangeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/RefererHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ReferrerPolicyHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/RetryAfterHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SaveDataHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentArchHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentBitnessHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentFullVersionHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentFullVersionListHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentMobileHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentModelHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentPlatformHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecClientHintUserAgentPlatformVersionHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecFetchDestHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecFetchModeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecFetchSiteHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecFetchUserHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecGPClientHinteader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SecWebSocketAcceptHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ServerHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ServerTimingHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ServiceWorkerNavigationPreloadHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SetCookieHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/SourceMapHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/StrictTransportSecurityHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/Structs/Accept.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/Structs/AcceptEncoding.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/Structs/AcceptLanguage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/Structs/HeaderDate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/TEHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/TimingAllowOriginHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/TkHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/TrailerHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/TransferEncodingHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/UpgradeHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/UpgradeInsecureRequestsHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/UserAgentHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/VaryHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ViaHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/ViewportWidthHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/WantDigestHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/WarningHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/WidthHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/WwwAuthenticateHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XContentTypeOptionsHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XForwardedForHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XForwardedHostHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XForwardedProtoHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XFrameOptionsHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XdnsPrefetchControlHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Headers/XxssProtectionHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Loggers/ILogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Loggers/LucasLogger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Reflection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/BodyAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/ControllerAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/EndpointManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/GETAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/HeaderAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/HeaderParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/HttpRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/HttpResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/IEndpointManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/IHeaderParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/IReadable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/IRequestHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/IWritable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/POSTAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/Request.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/RequestAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/RequestBody.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/RequestHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/RequestLine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/RequestMethods.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Requests/RequestParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/WebServer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/API.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/API.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/API.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/API.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/Debug/net8.0/API.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/Class1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/HTML.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/Debug/net8.0/HTML.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/Debug/net8.0/HTML.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/Debug/net8.0/HTML.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/Debug/net8.0/HTML.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/Debug/net8.0/HTML.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/HTML.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/HTML.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/HTML.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LucasAPIRemaster.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LucasAPIRemaster.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/Test.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Debug/net8.0/Test.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/obj/rider.project.restore.info" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2cLkHf3NVWpH5MKiTNx2v2QXHJm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/lucas/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/lucas/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/home/lucas/.local/share/Symbols/src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e5a401a-6d91-44ba-bdc4-c5eb09fc3c5b" name="Changes" comment="" />
+      <created>1707898160404</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707898160404</updated>
+      <workItem from="1707898162227" duration="68000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
