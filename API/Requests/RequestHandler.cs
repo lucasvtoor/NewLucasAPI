@@ -7,8 +7,14 @@ namespace API.Requests;
 public class RequestHandler : IRequestHandler
 {
     public IEndpointManager EndpointManager;
-    public RequestParser RequestParser;
+    public IRequestParser RequestParser;
 
+
+    public RequestHandler(IEndpointManager endpointManager, IRequestParser requestParser)
+    {
+        EndpointManager = endpointManager;
+        RequestParser = requestParser;
+    }
 
     public Task HandleAsync(NetworkStream stream, CancellationTokenSource cts)
     {

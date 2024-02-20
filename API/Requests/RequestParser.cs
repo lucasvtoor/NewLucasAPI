@@ -3,9 +3,15 @@ using System.Text.Json;
 
 namespace API.Requests;
 
-public class RequestParser
+public class RequestParser: IRequestParser
 {
     private IHeaderParser HeaderParser;
+
+    public RequestParser(IHeaderParser headerParser)
+    {
+        HeaderParser = headerParser;
+    }
+
     public RequestLine ReadRequestLine(HttpRequest request,StreamReader stream)
     {
         var requestLine = new RequestLine();
