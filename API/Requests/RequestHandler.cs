@@ -1,5 +1,6 @@
 ﻿using System.Net.Sockets;
 using System.Reflection;
+using System.Text;
 using API.Headers;
 
 namespace API.Requests;
@@ -8,22 +9,24 @@ public class RequestHandler : IRequestHandler
 {
     public IEndpointManager EndpointManager;
     public IRequestParser RequestParser;
+    public ILogger Logger;
 
-
-    public RequestHandler(IEndpointManager endpointManager, IRequestParser requestParser)
+    public RequestHandler(IEndpointManager endpointManager, IRequestParser requestParser, ILogger logger)
     {
+        Logger = logger;
         EndpointManager = endpointManager;
         RequestParser = requestParser;
     }
 
-    public Task HandleAsync(NetworkStream stream, CancellationTokenSource cts)
+    public async Task HandleAsync(NetworkStream stream, CancellationTokenSource cts)
     {
         var httpRequest = new HttpRequest();
         var streamReader = new StreamReader(stream);
         RequestParser.ReadRequestLine(httpRequest, streamReader);
         RequestParser.ReadRequestHeaders(httpRequest, streamReader);
-        if (((ContentLengthHeader)httpRequest.Headers[typeof(ContentLengthHeader)]).Length > 0)
+        if (httpRequest.Headers.ContainsKey(typeof(ContentLengthHeader)))
         {
+            Logger.LogDebug("Has error");
             var method = ParseUri(httpRequest);
             var bodyTypeParameter = method.GetMethodParameterWithAttribute<BodyAttribute>();
             if (bodyTypeParameter == null)
@@ -42,8 +45,19 @@ public class RequestHandler : IRequestHandler
             // httpRequest = genericHttpRequest;
             bodyRequest.Body = RequestParser.ReadRequestBody(bodyTypeParameter.ParameterType, streamReader);
         }
+        Logger.LogDebug(httpRequest.RequestLine.Path);
+        var methodInfo = EndpointManager.Get((httpRequest.RequestLine.Path, httpRequest.RequestLine.RequestMethod));
+        var controllerInstance = Activator.CreateInstance(methodInfo.DeclaringType);
+        var result = methodInfo.Invoke(controllerInstance, null);
+        byte[] buffer = Encoding.UTF8.GetBytes((string)result);
 
-        throw new NotImplementedException();
+
+        if (stream.CanWrite)
+        {
+            await stream.WriteAsync(buffer, 0, buffer.Length);
+            // Don't forget to flush the stream if buffering is enabled
+            stream.Flush();
+        }
     }
 
 
@@ -52,7 +66,10 @@ public class RequestHandler : IRequestHandler
         var keys = EndpointManager.Keys();
         var endpoints = keys.Where(s => s.Item2 == request.RequestLine.RequestMethod).Select(s => s.Item1);
         var uri = request.RequestLine.Path;
-        return EndpointManager.Get((GetTemplateMatch(endpoints, uri), request.RequestLine.RequestMethod));
+        var templateMatch = GetTemplateMatch(endpoints, uri);
+        Logger.LogInfo(templateMatch);
+
+        return EndpointManager.Get((templateMatch, request.RequestLine.RequestMethod));
     }
 
     static string GetTemplateMatch(IEnumerable<string> templates, string uri)

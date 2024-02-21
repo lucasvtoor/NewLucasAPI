@@ -72,9 +72,12 @@ public class DependencyInjector
 
     public DependencyInjector()
     {
-        AddSingleton<IHeaderParser, HeaderParser>();
-        AddSingleton<IRequestHandler, RequestHandler>();
+        AddSingleton<ILogger,LucasLogger>();
         AddSingleton<IEndpointManager, EndpointManager>();
+        AddSingleton<IHeaderParser, HeaderParser>();
         AddSingleton<IRequestParser, RequestParser>();
+        AddSingleton<IRequestHandler, RequestHandler>();
+  
+       
     }
 }

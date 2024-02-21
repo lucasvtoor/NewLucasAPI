@@ -7,4 +7,5 @@ public interface IEndpointManager
     public MethodInfo GetMethodByPathAndMethod(string path,RequestMethods requestMethod);
     public IEnumerable<(string,RequestMethods)> Keys();
     public MethodInfo Get((string, RequestMethods) sr);
+    void BuildEndpoints();
 }

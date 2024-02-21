@@ -12,8 +12,11 @@ public class AcceptHeader : Header
 
     public override void Read( HttpRequest request,string content)
     {
+        return;
         if(!content.Contains("Accept: ")) return;
-        accepts = (from s in content.Substring("Accept: ".Length).Split(',') select (Accept)s).ToArray();
+        accepts = Accept.ParseAcceptHeader((content.Substring("Accept: ".Length,
+            content.Length - "Accept: ".Length))).ToArray();
+        
         request.AddHeader(this);
     }
 

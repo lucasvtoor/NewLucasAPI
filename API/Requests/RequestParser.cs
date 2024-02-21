@@ -6,23 +6,26 @@ namespace API.Requests;
 public class RequestParser: IRequestParser
 {
     private IHeaderParser HeaderParser;
+    private ILogger Logger;
 
-    public RequestParser(IHeaderParser headerParser)
+    public RequestParser(IHeaderParser headerParser,ILogger logger)
     {
         HeaderParser = headerParser;
+        Logger = logger;
     }
 
-    public RequestLine ReadRequestLine(HttpRequest request,StreamReader stream)
+    public void ReadRequestLine(HttpRequest request,StreamReader stream)
     {
         var requestLine = new RequestLine();
         var content = _readRequestLine(stream);
+        Logger.LogInfo(content);
         var parts = content.Split(' ');
         requestLine.RequestMethod = Enum.Parse<RequestMethods>(parts[0]);
         requestLine.Path = parts[1];
         requestLine.Version = parts[2];
+        Logger.LogInfo(requestLine.Log());
         
-        
-        return requestLine;
+        request.RequestLine = requestLine;
     }
     private string _readRequestLine(StreamReader stream)
     {
@@ -52,6 +55,7 @@ public class RequestParser: IRequestParser
 
     public object ReadRequestBody(Type type, StreamReader stream)
     {
+        Logger.LogInfo($"Body type: {type}");
        return JsonSerializer.Deserialize(_readRequestBody(stream),type);
     }
     private string _readRequestBody(StreamReader stream)

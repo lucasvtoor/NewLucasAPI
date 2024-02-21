@@ -9,6 +9,7 @@ public static class Reflection
     {
         return types.Where(t => t.GetCustomAttribute<T>() != null);
     }
+
     public static IEnumerable<Type> WithoutAttribute<T>(this Type[] types) where T : Attribute
     {
         return types.Where(t => t.GetCustomAttribute<T>() == null);
@@ -28,23 +29,21 @@ public static class Reflection
     {
         return GetDerivedTypesFor(typeof(T));
     }
-    
+
     public static ParameterInfo? GetMethodParameterWithAttribute<T>(this MethodInfo methodInfo) where T : Attribute
     {
         return methodInfo.GetParameters().Where(p => p.GetCustomAttribute<T>() != null).FirstOrDefault();
     }
 
- 
-    
 
-    public static Dictionary<(string,RequestMethods), MethodInfo> GetEndpoints()
+    public static Dictionary<(string, RequestMethods), MethodInfo> GetEndpoints()
     {
-        var dict = Assembly.GetExecutingAssembly()
+        var dict = Assembly.GetEntryAssembly()
             .GetTypes()
             .WithoutAttribute<ControllerAttribute>()
             .SelectMany(t => t.GetMethods())
             .Where(m => m.GetCustomAttribute<RequestAttribute>(true) != null)
-            .ToDictionary(m => (m.Name,m.GetCustomAttribute<RequestAttribute>(true).RequestMethod));
+            .ToDictionary(m => (m.GetCustomAttribute<RequestAttribute>(true).Uri, m.GetCustomAttribute<RequestAttribute>(true).RequestMethod));
         var controllers = Assembly.GetExecutingAssembly()
             .GetTypes()
             .WithAttribute<ControllerAttribute>();
@@ -53,14 +52,15 @@ public static class Reflection
             var attr = controller.GetCustomAttribute<ControllerAttribute>();
             var endpoints = controller.GetMethods()
                 .Where(m => m.GetCustomAttribute<RequestAttribute>(true) != null);
-            
-            
+
+
             foreach (var endpoint in endpoints)
             {
                 var requestAttr = endpoint.GetCustomAttribute<RequestAttribute>();
-                dict.Add((attr.Path + requestAttr.Uri ,requestAttr.RequestMethod), endpoint);
+                dict.Add((attr.Path + requestAttr.Uri, requestAttr.RequestMethod), endpoint);
             }
         }
+
         return dict;
     }
 }

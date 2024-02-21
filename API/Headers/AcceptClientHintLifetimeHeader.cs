@@ -3,7 +3,7 @@
 namespace API.Headers;
 
 [Header]
-
+[DeprecatedHeader]
 public class AcceptClientHintLifetimeHeader : Header
 
 {

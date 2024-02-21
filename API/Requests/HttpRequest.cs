@@ -5,8 +5,8 @@ namespace API.Requests;
 public class HttpRequest
 {
     public RequestLine RequestLine;
-    public Dictionary<Type,Header> Headers;
-    public Dictionary<string, object> QueryParameters;
+    public Dictionary<Type,Header> Headers = new();
+    public Dictionary<string, object> QueryParameters = new();
 
     public void AddHeader<T>(T t) where T : Header
     {

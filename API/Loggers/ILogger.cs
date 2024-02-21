@@ -2,6 +2,8 @@ namespace API;
 
 public interface ILogger
 {
+    
+    
     /// <summary>
     /// Logs a logo.
     /// </summary>
