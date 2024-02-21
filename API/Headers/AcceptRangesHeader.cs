@@ -1,4 +1,5 @@
-﻿using API.Requests;
+﻿using System.Net.Sockets;
+using API.Requests;
 
 namespace API.Headers;
 
@@ -14,8 +15,8 @@ public class AcceptRangesHeader : Header
 
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
-        await response.WriteOutputAsync($"Accept-Ranges: {RangeUnit}");
+        await stream.WriteStringAsync($"Accept-Ranges: {RangeUnit}");
     }
 }

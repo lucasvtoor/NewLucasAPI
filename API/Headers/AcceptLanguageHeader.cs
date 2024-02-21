@@ -1,4 +1,5 @@
-﻿using API.Headers.Structs;
+﻿using System.Net.Sockets;
+using API.Headers.Structs;
 using API.Requests;
 
 namespace API.Headers;
@@ -16,7 +17,7 @@ public class AcceptLanguageHeader : Header
         request.AddHeader(this);
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
        throw new NotImplementedException();
     }

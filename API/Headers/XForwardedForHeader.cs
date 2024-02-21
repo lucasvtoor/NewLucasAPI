@@ -1,4 +1,5 @@
-﻿using API.Requests;
+﻿using System.Net.Sockets;
+using API.Requests;
 
 namespace API.Headers;
 
@@ -12,7 +13,7 @@ public class XForwardedForHeader : Header
         request.AddHeader(this);
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
        throw new NotImplementedException();
     }

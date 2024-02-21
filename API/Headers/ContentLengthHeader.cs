@@ -1,4 +1,5 @@
-﻿using API.Requests;
+﻿using System.Net.Sockets;
+using API.Requests;
 
 namespace API.Headers;
 
@@ -17,8 +18,8 @@ public class ContentLengthHeader : Header
         }
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
-        await response.WriteOutputAsync($"Content-Length: {Length}");
+        await stream.WriteStringAsync($"Content-Length: {Length}");
     }
 }

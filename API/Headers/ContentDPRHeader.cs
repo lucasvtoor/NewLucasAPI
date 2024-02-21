@@ -1,4 +1,5 @@
-﻿using API.Requests;
+﻿using System.Net.Sockets;
+using API.Requests;
 
 namespace API.Headers;
 
@@ -15,8 +16,8 @@ public class ContentDPRHeader : Header
 
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
-        await response.WriteOutputAsync($"Content-DPR: {Dpr}");
+        await stream.WriteStringAsync($"Content-DPR: {Dpr}");
     }
 }

@@ -1,4 +1,5 @@
-﻿using API.Requests;
+﻿using System.Net.Sockets;
+using API.Requests;
 
 namespace API.Headers;
 
@@ -13,8 +14,8 @@ public class SourceMapHeader : Header
         request.AddHeader(this);
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
-        response.WriteOutputAsync($"SourceMap: {url}");
+        stream.WriteStringAsync($"SourceMap: {url}");
     }
 }

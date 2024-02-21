@@ -1,4 +1,5 @@
-﻿using API.Requests;
+﻿using System.Net.Sockets;
+using API.Requests;
 
 namespace API.Headers;
 
@@ -14,9 +15,9 @@ public class AcceptClientHintHeader : Header
         request.AddHeader(this);
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
-        await response.WriteOutputAsync($"Accept-CH: {String.Join(", ", ClientHints)}");
+        await stream.WriteStringAsync($"Accept-CH: {String.Join(", ", ClientHints)}");
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Net.Sockets;
+using System.Text;
 using API.Headers.Structs;
 using API.Requests;
 
@@ -20,7 +21,7 @@ public class AcceptHeader : Header
         request.AddHeader(this);
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
         var sb = new StringBuilder();
         sb.Append("Accept: ");
@@ -30,7 +31,7 @@ public class AcceptHeader : Header
         }
 
         sb.Remove(sb.Length - 2, sb.Length);
-        response.WriteOutputAsync(
+        stream.WriteStringAsync(
             sb.ToString());
     }
 }

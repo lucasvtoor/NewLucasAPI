@@ -1,4 +1,5 @@
-﻿using API.Headers.Structs;
+﻿using System.Net.Sockets;
+using API.Headers.Structs;
 using API.Requests;
 
 namespace API.Headers;
@@ -27,9 +28,9 @@ public sealed class DateHeader : Header
         request.AddHeader(this);
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
-        await response.WriteOutputAsync(
+        await stream.WriteStringAsync(
             $"Date: {date.DayName}, {date.Day} {date.Month} {date.Year} {date.Hour}:{date.Minute}:{date.Second} GMT");
     }
 }

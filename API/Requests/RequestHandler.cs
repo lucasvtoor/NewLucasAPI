@@ -1,6 +1,7 @@
 ﻿using System.Net.Sockets;
 using System.Reflection;
-using System.Text;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 using API.Headers;
 
 namespace API.Requests;
@@ -49,17 +50,16 @@ public class RequestHandler : IRequestHandler
         var methodInfo = EndpointManager.Get((httpRequest.RequestLine.Path, httpRequest.RequestLine.RequestMethod));
         var controllerInstance = Activator.CreateInstance(methodInfo.DeclaringType);
         var result = methodInfo.Invoke(controllerInstance, null);
-        byte[] buffer = Encoding.UTF8.GetBytes((string)result);
-
-
-        if (stream.CanWrite)
+        if (methodInfo.ReturnType != typeof(HttpResponse))
         {
-            await stream.WriteAsync(buffer, 0, buffer.Length);
-            // Don't forget to flush the stream if buffering is enabled
-            stream.Flush();
+            var httpResponse = new HttpResponse();
+            httpResponse.Body = result;
+            await httpResponse.WriteOutputAsync(stream);
         }
-    }
 
+        var res = (HttpResponse)result;
+        res.WriteOutputAsync(stream);
+    }
 
     public MethodInfo ParseUri(HttpRequest request)
     {
@@ -101,6 +101,6 @@ public class RequestHandler : IRequestHandler
             }
         }
 
-        return null; // No match found
+        throw new NotImplementedException(); // No match found
     }
 }

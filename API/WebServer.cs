@@ -1,14 +1,7 @@
-using System.Net;
 using System.Net.Sockets;
 using API.Requests;
 
 namespace API;
-
-public static class Properties
-{
-    public static int Port = 5000;
-    public static IPAddress IpAddress = IPAddress.Any;
-}
 
 public class WebServer
 {

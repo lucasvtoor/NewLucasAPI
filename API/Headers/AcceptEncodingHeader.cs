@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Net.Sockets;
+using System.Text;
 using API.Headers.Structs;
 using API.Requests;
 
@@ -13,7 +14,7 @@ public class AcceptEncodingHeader : Header
         
     }
 
-    public override async Task Write(HttpResponse response)
+    public override async Task Write(NetworkStream stream)
     {
         var sb = new StringBuilder();
         sb.Append("Accept-Encoding: ");
@@ -23,6 +24,6 @@ public class AcceptEncodingHeader : Header
         }
 
         sb.Remove(sb.Length - 2, sb.Length);
-        response.WriteOutputAsync(sb.ToString());
+        stream.WriteStringAsync(sb.ToString());
     }
 }
